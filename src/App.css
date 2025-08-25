@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Background for full app */
+.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Calculator container */
+.calc-container {
+  width: 300px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Display */
+.calc-display {
+  background: #222;
+  color: #0f0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.4);
+}
+
+/* Button panel grid */
+.calc-button-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Reusable button */
+.calc-btn {
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  background: #3498db;
   color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.calc-btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calc-btn:active {
+  background: #1c6ea4;
+  transform: translateY(1px);
 }
